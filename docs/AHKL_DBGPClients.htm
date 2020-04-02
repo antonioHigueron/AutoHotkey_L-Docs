@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-<title>Debugging Clients | AutoHotkey</title>
+<title>Depuración de clientes | AutoHotkey</title>
 <meta name="description" content="This page lists some debugging clients or UIs known to be compatible with AutoHotkey." />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,112 +10,111 @@
 </head>
 <body>
 
-<h1>Debugging Clients</h1>
+<h1>Depuración de clientes</h1>
 
-<p>Additional debugging features are supported via <a href="http://xdebug.org/docs-dbgp.php">DBGp</a>, a common debugger protocol for languages and debugger UI communication. See <a href="Scripts.htm#idebug">Interactive Debugging</a> for more details. Some UIs or "clients" known to be compatible with AutoHotkey are listed on this page:</p>
+<p>Las características adicionales de depuración son soportadas a través de <a href="http://xdebug.org/docs-dbgp.php">DBGp</a>, un protocolo común de depuración para los idiomas y la comunicación de la interfaz de usuario del depurador. Ver <a href="Scripts.htm#idebug">Depuración interactiva</a> para más detalles. Algunas UI o "clientes" que se sabe que son compatibles con la AutoHotkey se enumeran en esta página:</p>
 <ul>
   <li><a href="#SciTE4AutoHotkey">SciTE4AutoHotkey</a></li>
   <li><a href="#XDebugClient">XDebugClient</a></li>
   <li><a href="#Notepad++">Notepad++ DBGp Plugin</a></li>
-  <li><a href="#dbgp.ahk">Script-based Clients</a></li>
-  <li><a href="#command-line-client">Command-line Client</a></li>
-  <li><a href="#others">Others</a></li>
+  <li><a href="#dbgp.ahk">Clientes con guión</a></li>
+  <li><a href="#command-line-client">Cliente de línea de comando</a></li>
+  <li><a href="#otros">Otros</a></li>
 </ul>
 
 <h2 id="SciTE4AutoHotkey">SciTE4AutoHotkey</h2>
-<p><a href="http://fincs.ahk4.net/scite4ahk/">SciTE4AutoHotkey</a> is a free, <a href="http://www.scintilla.org/SciTE.html">SciTE</a>-based AutoHotkey script editor. In addition to DBGp support, it provides syntax highlighting, calltips/parameter info and auto-complete for AutoHotkey, and other useful editing features and scripting tools.</p>
-<p>Debugging features include:</p>
+<p><a href="http://fincs.ahk4.net/scite4ahk/">SciTE4AutoHotkey</a> es un editor de script gratuito, <a href="http://www.scintilla.org/SciTE.html">SciTE</a> basado en AutoHotkey. Además del soporte DBGp, proporciona resaltado de sintaxis, información de parámetros y autocompletar para AutoHotkey, y otras características útiles de edición y herramientas de scripting.</p>
+<p> Las características de depuración incluyen:</p>
 <ul>
-  <li>Breakpoints.</li>
-  <li>Run, Step Over/Into/Out.</li>
-  <li>View the call stack.</li>
-  <li>List name and contents of variables in local/global scope.</li>
-  <li>Hover over variable to show contents.</li>
-  <li>Inspect or edit variable contents.</li>
-  <li>View structure of objects.</li>
+  <li>Puntos de ruptura.</li>
+  <i>Corre, Pasa por encima/Entra/Sale.</i>
+  <li>Ver la pila de llamadas.</li>
+  <li>Nombre de la lista y contenido de las variables en el ámbito local/global.</li>
+  <li>Pase el cursor sobre la variable para mostrar el contenido.</li>
+  <li>Inspeccionar o editar contenidos variables.</li>
+  <li>Ver estructura de los objetos.</li>
 </ul>
 <p><a href="http://fincs.ahk4.net/scite4ahk/">http://fincs.ahk4.net/scite4ahk/</a></p>
 
 <h2 id="XDebugClient">XDebugClient</h2>
-<p><a href="http://code.google.com/p/xdebugclient/">XDebugClient</a> is a simple open-source front-end DBGp client based on the <b>.NET Framework 2.0</b>. XDebugClient was originally designed for PHP with Xdebug, but a custom build compatible with AutoHotkey is available below.</p>
-<p><b>Changes:</b></p>
+<p><a href="http://code.google.com/p/xdebugclient/">XDebugClient</a> es un simple cliente DBGp de código abierto basado en el <b>.NET Framework 2.0</b>. XDebugClient fue diseñado originalmente para PHP con Xdebug, pero una compilación personalizada compatible con AutoHotkey está disponible abajo.</p>
+<p><b>Cambios:</b></p>
 <ul>
-  <li>Allow the debugger engine to report a language other than "php".</li>
-  <li>Added AutoHotkey syntax highlighting.</li>
-  <li>Automatically listen for a connection from the debugger engine, rather than waiting for the user to click <em>Start Listening</em>.</li>
-  <li>Truncate property values at the first null-character, since AutoHotkey currently returns the entire variable contents and XDebugClient has no suitable interface for displaying binary content.</li>
+  <li>Permitir que el motor de depuración informe de un lenguaje distinto al "php".</li>
+  <li>Añadido resaltado de sintaxis AutoHotkey.</li>
+  <li>Automáticamente escuchar una conexión del motor de depuración, en lugar de esperar a que el usuario haga clic en <em>Iniciar la escucha</em>.</li>
+  <li>Truncar los valores de las propiedades en el primer carácter nulo, ya que AutoHotkey actualmente devuelve todo el contenido de la variable y XDebugClient no tiene una interfaz adecuada para mostrar el contenido binario.</li>
 </ul>
-<p><b>Download:</b> <a href="https://www.autohotkey.com/download/tools/XDebugClient.zip">Binary</a>; <a href="https://www.autohotkey.com/download/tools/XDebugClient_src.zip">Source Code</a> (also see <a href="http://www.icsharpcode.net/">SharpDevelop</a>, <a href="http://sourceforge.net/projects/dockpanelsuite/">Dockpanel Suite</a> and <a href="https://www.codeproject.com/Articles/14741/Advanced-TreeView-for-NET">Advanced TreeView</a>.)</p>
-<p><b>Usage:</b></p>
+<p><b>Descargar:</b> <a href="https://www.autohotkey.com/download/tools/XDebugClient.zip">Binario</a>; <a href="https://www.autohotkey.com/download/tools/XDebugClient_src.zip">Código fuente</a> (ver también <a href="http://www.icsharpcode.net/">SharpDevelop</a>, <a href="http://sourceforge.net/projects/dockpanelsuite/">Dockpanel Suite</a> y <a href="https://www.codeproject.com/Articles/14741/Advanced-TreeView-for-NET">Advanced TreeView</a>.)</p>
+<p><b>Uso:</b></p>
 <ul>
-  <li>Launch XDebugClient.</li>
-  <li>Launch AutoHotkey /Debug. XDebugClient should automatically open the script file.</li>
+  <li>Lanzar XDebugClient.</li>
+  <li>Lanzar AutoHotkey /Debug. XDebugClient debería abrir automáticamente el archivo de script.</li>
   <li>Click the left margin to set at least one breakpoint.</li>
-  <li>Choose Run from the Debug menu, or press <kbd>F5</kbd>.</li>
-  <li>When execution hits a breakpoint, use the Debug menu or shortcut keys to step through or resume the script.</li>
+  <li>Elige Run en el menú Debug, o presiona <kbd>F5</kbd>.</li>
+  <li>Cuando la ejecución alcanza un punto de interrupción, use el menú de depuración o las teclas de atajo para pasar o reanudar el guión.</li>
 </ul>
-<p><b>Features:</b></p>
+<p><b>Características:</b></p>
 <ul>
-  <li>Syntax highlighted, read-only view of the source code.</li>
-  <li>Breakpoints.</li>
-  <li>Run, Step Over/Into/Out.</li>
-  <li>View the call stack.</li>
-  <li>Inspect variables - select a variable name, right-click, Inspect.</li>
+  <li>Sintaxis resaltada, vista de sólo lectura del código fuente.</li>
+  <li>Puntos de ruptura.</li>
+  <i>Corre, Pasa por encima/Entra/Sale.</i>
+  <li>Ver la pila de llamadas.</li>
+  <li>Inspeccionar las variables - seleccionar un nombre de variable, hacer clic derecho, Inspeccionar.</li>
 </ul>
-<p><b>Issues:</b></p>
+<p><b>Temas:</b></p>
 <ul>
-  <li>The user interface does not respond to user input while the script is running.</li>
-  <li>No mechanisms are provided to list variables or set their values.</li>
+  <li>La interfaz de usuario no responde a las entradas del usuario mientras el guión está en marcha.</li>
+  <li> No se proporcionan mecanismos para listar las variables o establecer sus valores.</li>
 </ul>
 
 <h2 id="Notepad++">Notepad++ DBGp Plugin</h2>
-<p>A DBGp client is available as a plugin for <a href="http://notepad-plus-plus.org/">Notepad++</a>. It is designed for PHP, but also works well with AutoHotkey.</p>
-<p><b>Download:</b> See <a href="https://sourceforge.net/projects/npp-plugins/files/DBGP%20Plugin/">DBGp plugin for Notepad++</a>.</p>
-<p><b>Usage:</b></p>
+<p>Un cliente DBGp está disponible como un plugin para <a href="http://notepad-plus-plus.org/">Notepad++</a>. Está diseñado para PHP, pero también funciona bien con AutoHotkey.</p>
+<p><b>Descargar:</b> Ver <a href="https://sourceforge.net/projects/npp-plugins/files/DBGP%20Plugin/">DBGp plugin para Notepad++</a>.</p>
+<p><b>Uso:</b></p>
 <ul>
-  <li>Launch Notepad++.</li>
-  <li>Configure the DBGp plugin via <i>Plugins</i>, <i>DBGp</i>, <i>Config...</i>
-    <p class="note"><b>Note:</b> File Mapping must be configured.  Most users will not be debugging remotely, and therefore may simply put a checkmark next to <i>Bypass all mapping (local windows setup)</i>.</p>
+  <li>Lanzamiento del bloc de notas++.</li>
+  <li>Configurar el plugin DBGp a través de <i>Plugins</i>, <i>DBGp</i>, <i>Config...</i>
+    <p class="note"><b>Nota:</b> La asignación de archivos debe ser configurada.  La mayoría de los usuarios no depurarán remotamente, y por lo tanto pueden simplemente poner una marca de verificación junto a <i>Suprimir todo el mapeo (configuración local de ventanas)</i>.</p>
   </li>
-  <li>Show the debugger pane via the toolbar or <b>Plugins</b>, <b>DBGp</b>, <b>Debugger</b>.</li>
-  <li>Open the script file to be debugged.</li>
-  <li>Set at least one breakpoint.</li>
-  <li>Launch AutoHotkey /Debug.</li>
-  <li>Use the debugger toolbar or shortcut keys to control the debugger.</li>
+  <li>Muestra el panel de depuración a través de la barra de herramientas o <b>Plugins</b>, <b>DBGp</b>, <b>Debugger</b>.</li>
+  <li>Abre el archivo del guión para ser depurado.</li>
+  <li>Establecer al menos un punto de ruptura.</li>
+  <li>Lanzar AutoHotkey /Debug.</li>
+  <li>Utiliza la barra de herramientas del depurador o las teclas de atajo para controlar el depurador.</li>
 </ul>
-<p><b>Features:</b></p>
+<p><b>Características:</b></p>
 <ul>
-  <li>Syntax highlighting, if configured by the user.</li>
-  <li>Breakpoints.</li>
-  <li>Run, Step Over/Into/Out, Run to cursor, Stop.</li>
-  <li>View local/global variables.</li>
-  <li>Watch user-specified variables.</li>
-  <li>View the call stack.</li>
-  <li>Hover over a variable to view its contents.</li>
-  <li>User-configurable shortcut keys - Settings, Shortcut Mapper..., Plugin commands.</li>
+  <li>Resaltado de la sintaxis, si está configurado por el usuario.</li>
+  <li>Puntos de ruptura.</li>
+  <li>Corre, Pasa por encima, entra y sale, corre hasta el cursor, para.</li>
+  <li>Ver variables locales/globales.</li>
+  <li>Vigilar las variables especificadas por el usuario.</li>
+  <li>Ver la pila de llamadas.</li>
+  <li>Pase el cursor sobre una variable para ver su contenido.</li>
+  <li>Teclas de atajo configurables por el usuario - Configuración, Mapeador de atajos..., comandos del Plugin.</li>
 </ul>
-<p><b>Issues:</b></p>
+<p><b>Temas:</b></p>
 <ul>
-  <li>Hovering over a single-letter variable name does not work - for instance, hovering over <code>a</code> will attempt to retrieve <code>&nbsp;a</code> or <code>a </code>.</li>
-  <li>Hovering over text will attempt to retrieve a variable even if the text contains invalid characters.</li>
-  <li>Notepad++ becomes unstable if property_get fails, which is particularly problematic in light of the above. As a workaround, AutoHotkey sends an empty property instead of an error code when a non-existent or invalid variable is requested.</li>
+  <li>Voltear sobre un nombre de variable de una sola letra no funciona - por ejemplo, voltear sobre <código>a</código> intentará recuperar <código>&nbsp;a</código> o <código>a </código>.</li>
+  <li>Al pasar el cursor sobre el texto se intentará recuperar una variable aunque el texto contenga caracteres inválidos.</li>
+  <li>Notepad++ se vuelve inestable si property_get falla, lo que es particularmente problemático a la luz de lo anterior. Como solución, AutoHotkey envía una propiedad vacía en lugar de un código de error cuando se solicita una variable inexistente o inválida.</li>
 </ul>
 
-<h2 id="dbgp.ahk">Script-based Clients</h2>
-<p>A script-based DBGp library and example clients are available from GitHub.</p><ul>
-  <li>dbgp_console.ahk: Simple command-line client.</li>
-  <li>dbgp_test.ahk: Demonstrates asynchronous debugging.</li>
-  <li>dbgp_listvars.ahk: Example client which justs lists the variables of all running scripts.</li>
+<h2 id="dbgp.ahk">Clientes basados en scripts</h2>
+<p>Una librería DBGp basada en scripts y clientes de ejemplo están disponibles en GitHub.</p><ul>
+  <li>dbgp_console.ahk: Un simple cliente de línea de comandos.
+  <li>dbgp_test.ahk: Demuestra una depuración asincrónica.
+  <li>dbgp_listvars.ahk: Ejemplo de cliente que simplemente lista las variables de todos los scripts en ejecución.</li>
 </ul>
 <p>GitHub: <a href="https://github.com/Lexikos/dbgp">Lexikos / <strong>dbgp</strong></a></p>
-<p>The DebugVars script provides a graphical user interface for inspecting and changing the contents of variables and objects in any running script (except compiled scripts). It also serves as a demonstration of the dbgp.ahk library.</p>
+<p>El guión DebugVars proporciona una interfaz gráfica de usuario para inspeccionar y cambiar el contenido de las variables y objetos en cualquier guión en ejecución (excepto los guiones compilados). También sirve como una demostración de la biblioteca dbgp.ahk.</p>
 <p>GitHub: <a href="https://github.com/Lexikos/DebugVars.ahk#debugvars">Lexikos / <strong>DebugVars</strong></a></p>
 
-<h2 id="command-line-client">Command-line Client</h2>
-<p>A command-line client is available from <a href="http://xdebug.org/">xdebug.org</a>, however this is not suitable for most users as it requires a decent understanding of DBGp (the protocol).</p>
+<h2 id="command-line-client">Cliente de línea de comandos</h2>
+<p>Un cliente de línea de comandos está disponible en <a href="http://xdebug.org/">xdebug.org</a>, sin embargo esto no es adecuado para la mayoría de los usuarios ya que requiere una comprensión decente de DBGp (el protocolo).</p>
 
-<h2 id="others">Others</h2>
-<p>A number of other DBGp clients are available, but have not been tested with AutoHotkey. For a list, see <a href="http://xdebug.org/docs/remote">Xdebug: Documentation</a>.</p>
-
+<h2 id="otros">Otros</h2>
+<p>Hay otros clientes DBGp disponibles, pero no han sido probados con AutoHotkey. Para una lista, ver <a href="http://xdebug.org/docs/remote">Xdebug: Documentación</a>.</p>
 </body>
 </html>
